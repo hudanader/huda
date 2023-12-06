@@ -1,0 +1,27 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label for="name">Name</label>
+  <input type="text" id="name" formControlName="name">
+
+  <label for="email">Email</label>
+  <input type="email" id="email" formControlName="email">
+
+  <label for="programmingLanguages">Programming Languages</label>
+  <select id="programmingLanguages" formControlName="programmingLanguages" multiple>
+    <option value="JavaScript">JavaScript</option>
+    <option value="Python">Python</option>
+    <option value="Java">Java</option>
+    <option value="C++">C++</option>
+  </select>
+  <label for="experienceLevel">Experience Level</label>
+  <div>
+    <input type="radio" id="beginner" value="Beginner" formControlName="experienceLevel">
+    <label for="beginner">Beginner</label>
+  </div>
+  <div>
+    <input type="radio" id="intermediate" value="Intermediate" formControlName="experienceLevel">
+    <label for="intermediate">Intermediate</label>
+  </div>
+  <div>
+    <input type="radio" id="advanced" value="Advanced" formControlName="experienceLevel">
+    <label for="advanced">Advanced</label>
+  </div>
